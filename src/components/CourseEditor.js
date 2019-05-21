@@ -1,6 +1,7 @@
 import React from 'react'
 import ModuleList from "./ModuleList";
 import LessonTabs from "./LessonTabs";
+import TopicPills from "./TopicPills";
 
 export default class CourseEditor extends React.Component {
     render() {
@@ -13,6 +14,8 @@ export default class CourseEditor extends React.Component {
                     </div>
                     <div className="col-8 right">
                         <LessonTabs/>
+                        <br/>
+                        <TopicPills/>
                     </div>
                 </div>
             </div>

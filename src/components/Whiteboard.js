@@ -11,13 +11,12 @@ export default class Whiteboard extends React.Component {
             <div className="container">
                 <h1>White board!</h1>
                 {/*<ModuleList/>*/}
-                <CourseEditor/>
                 <div className="card-group">
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
+                    <CourseCard title="CS5200"/>
+                    <CourseCard title="CS5610"/>
+                    <CourseCard title="CS5500"/>
                 </div>
+                <CourseEditor/>
             </div>//A pill in react
         )
     }
