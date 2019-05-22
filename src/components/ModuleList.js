@@ -2,12 +2,13 @@ import React from 'react'
 import ModuleItem from "./ModuleItem";
 
 export default class ModuleList extends React.Component {
+
     constructor() {
         super();
         this.state = {
             module: {
                 id: -1,
-                title: ''
+                title: 'please type in here'
             },
             modules:
                 [
@@ -17,6 +18,12 @@ export default class ModuleList extends React.Component {
                 ]//different module for same course.
         }; //has to be called state.
     }
+
+    createModule = () => {
+        this.setState({
+             modules: [this.state.module , ...this.state.modules]
+        })
+    };
 
     render() {
         return (
@@ -29,7 +36,8 @@ export default class ModuleList extends React.Component {
                         <input
                             value={this.state.module.title}
                             className="form-control"/>
-                        <button className="btn btn-primary btn-block"> Add Module
+                        <button onClick={this.createModule} className="btn btn-primary btn-block">
+                            Add Module
                         </button>
                     </li>
                     {
@@ -50,5 +58,6 @@ export default class ModuleList extends React.Component {
                 {/*</ul>*/}
             </div>
         )
+
     }
 }
