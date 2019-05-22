@@ -30,7 +30,7 @@ export default class Whiteboard extends React.Component {
                            render={() => <CourseGrid courses={courses}/>}/>
 
                     <Route
-                        path="/course-editor"
+                        path="/course-editor/:courseId"
                        component={CourseEditor}/>
 
                     {/*<div className="card-group">*/}

@@ -7,7 +7,9 @@ const CourseGrid = ({courses}) =>
         <div className="card-group">
             {
                 courses.map((course) =>
-                    <CourseCard title={course.title}/>)
+                    <CourseCard
+                        course={course}
+                        title={course.title}/>)
 
             }
         </div>
