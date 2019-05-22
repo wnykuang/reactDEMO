@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ModuleItem = ({title}) => {
+const ModuleItem = ({module, deleteModule}) => {
     return (
         <li className="list-group-item">
-            {title}
+            {module.title}
+            <button onClick={deleteModule}>Delete</button>
         </li>
     )
 }
