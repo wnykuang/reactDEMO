@@ -6,9 +6,14 @@ import TopicPills from "./TopicPills";
 export default class CourseEditor extends React.Component {
 
     constructor(props) {
-        super()
+        super(props)
+        const pathname = window.location.pathname
+        const paths = pathname.split("/")
+        const courseId = paths[2]
+        this.courses = props.courses
         this.state = {
-            courseId : props.match.params.courseId
+            courseId : courseId,
+            course : this.courses.find(courses => courses.id == courseId)
         }
     }
 
@@ -17,10 +22,11 @@ export default class CourseEditor extends React.Component {
     render() {
         return (
             <div>
-                <h2>Course Editor {this.state.courseId}</h2>
+                <h2> {this.state.course.title} {this.state.course.id}</h2>
                 <div className="row">
                     <div className="col-4 left">
-                        <ModuleList/>
+                        {/*{this.state.course.modules.length}*/}
+                        <ModuleList modules={this.state.course.modules}/>
                     </div>
                     <div className="col-8 right">
                         <LessonTabs/>

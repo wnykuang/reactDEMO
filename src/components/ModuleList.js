@@ -3,19 +3,19 @@ import ModuleItem from "./ModuleItem";
 
 export default class ModuleList extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             module: {
                 id: -1,
                 title: 'please type in here'
             },
-            modules:
-                [
-                    {id: 123, title: "Organic Chem"},
-                    {id: 234, title: "Econ 101"},
-                    {id: 456, title: "Quantum Phys"}
-                ]//different module for same course.
+            modules: this.props.modules
+                // [
+                //     {id: 123, title: "Organic Chem"},
+                //     {id: 234, title: "Econ 101"},
+                //     {id: 456, title: "Quantum Phys"}
+                // ]//different module for same course.
         }; //has to be called state.
     }
 

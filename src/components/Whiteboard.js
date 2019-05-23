@@ -9,6 +9,10 @@ import courses from './courses.json'
 
 
 export default class Whiteboard extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
     render() {
         //overriding the Component class's render
         //render is the interface
@@ -31,7 +35,7 @@ export default class Whiteboard extends React.Component {
 
                     <Route
                         path="/course-editor/:courseId"
-                       component={CourseEditor}/>
+                        render={props => <CourseEditor courses={courses}/>}/>
 
                     {/*<div className="card-group">*/}
                     {/*    <CourseCard title="CS5200"/>*/}
