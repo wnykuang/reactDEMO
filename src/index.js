@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import MathRedux from './MathRedux'
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.css'
 import Whiteboard from './components/Whiteboard'
 
 ReactDOM.render(
-    <Whiteboard />,
+    <Whiteboard/>,
     document.getElementById('root'));
 
 
